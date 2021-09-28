@@ -1,0 +1,24 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<input @value="text"/>
+
+
+
+@code {
+    public Index(){
+        Task.Delay(1000).ContinueWith(e=>{
+            text="Hello, world";
+            });
+    }
+    public string text
+    {
+        get;
+        set;
+    }
+}
